@@ -7,7 +7,7 @@
     private $user = 'norac';
     private $password = '123';
     private $conexion;
-    private $nombre_db='agenda';
+    private $nombre_db='agendaphp';
 
     function initConexion(){
       $this->conexion = new mysqli($this->host, $this->user, $this->password,$this->nombre_db);
