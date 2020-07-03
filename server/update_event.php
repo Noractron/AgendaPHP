@@ -11,11 +11,8 @@ if ($con->initConexion()=='OK'){
     }else{
     	$php_response=array("msg"=>"Error al eliminar el evento","eventos"=>$idevento); 
     }
-	 
 	echo json_encode($php_response,JSON_FORCE_OBJECT);
-
     $con->cerrarConexion();
-    
 }else {
     echo "Se presentó un error en la conexión";
 }

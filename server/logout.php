@@ -1,9 +1,9 @@
 <?php
 session_start();
-  unset($_SESSION["nombre_usuario"]); 
-  unset($_SESSION["nombre_cliente"]);
+  unset($_SESSION["password"]); 
+  unset($_SESSION["username"]);
   session_destroy();
-  header("Location: index.php");
+  header("../client/index.html");
   exit;
 
  ?>

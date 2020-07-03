@@ -1,6 +1,4 @@
 <?php
-
-
   class ConectorBD
   {
     private $host = 'localhost';
@@ -55,16 +53,6 @@
 
     function cerrarConexion(){
       $this->conexion->close();
-    }
-
-    function nuevaRestriccion($tabla, $restriccion){
-      $sql = 'ALTER TABLE '.$tabla.' '.$restriccion;
-      return $this->ejecutarQuery($sql);
-    }
-
-    function nuevaRelacion($from_tbl, $to_tbl, $from_field, $to_field){
-      $sql = 'ALTER TABLE '.$from_tbl.' ADD FOREIGN KEY ('.$from_field.') REFERENCES '.$to_tbl.'('.$to_field.');';
-      return $this->ejecutarQuery($sql);
     }
 
     function insertData($tabla, $data){

@@ -18,7 +18,6 @@ if ($con->initConexion()=='OK'){
 
 
     if ($con->insertData('eventos', $datos)) {
-      //echo "Se han registrado los datos correctamente";
       	$php_response=array("msg"=>"OK","data"=>"2");  
     }else{
     	$php_response=array("msg"=>"Error la registrar los datos","data"=>"2"); 
